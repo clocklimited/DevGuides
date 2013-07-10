@@ -2,8 +2,7 @@ module.exports = serve
 
 var fs = require('fs')
   , connect = require('connect')
-  , dir = process.env.PWD
-  , config = require(dir + '/config')
+  , config = require(__dirname + '/config')
   , Stream = require('stream')
 
 function serve() {
@@ -11,7 +10,7 @@ function serve() {
   function router(req, res, next) {
     var route = config.routes[req.url]
     if (route) {
-      fs.createReadStream(dir + '/preview/' + route + '.html').pipe(res)
+      fs.createReadStream(__dirname + '/preview/' + route + '.html').pipe(res)
     } else {
       next()
     }
@@ -20,7 +19,7 @@ function serve() {
   var server = connect()
     .use(connect.logger('dev'))
     .use(router)
-    .use(connect.static(dir + '/preview'))
+    .use(connect.static(__dirname + '/preview'))
     .listen(config.port || 3000)
 
   console.log(
