@@ -139,5 +139,5 @@
   }
   , "compressCSS": true
   , "stylusLinenos": false
-  , "port": 6200
+  , "port": 8100
 }
