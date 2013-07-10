@@ -1,0 +1,158 @@
+extend ../layouts/default
+
+block content
+  .section
+    .centering
+      :markdown
+
+        *This page is a work in progress*
+
+        > Expressive, robust, feature-rich CSS language built for nodejs
+        >
+        > <small><cite>[learnboost.github.io/stylus/](http://learnboost.github.io/stylus/)</cite></small>
+
+        Stylus is a CSS preprocessor, similar to LESS and Sass. It features the most minimal syntax of these three. It has huge benefits over regular CSS in terms of speed of writing and dynamic features.
+
+        When writing Stylus, use the same guidelines as when writing CSS. However, there are a few major differences to keep in mind.
+
+  .section
+    .centering
+      :markdown
+
+        ## General Syntax
+
+        Whilst you can write Stylus as if it were standard CSS, we prefer to remove all unnecessary punctuation and repetition. When using multiple selectors in a single rule, we write each on a new line, without trailing commas.
+
+      .grid
+        .grid__item.one-whole.lapdesk-one-half
+          :markdown
+            ###### CSS Syntax
+                .class1, .class2 {
+                  position: relative;
+                  color: blue;
+                }
+
+                .class1:hover, .class2:hover {
+                  color: red;
+                }
+
+
+        .grid__item.one-whole.lapdesk-one-half
+          :markdown
+            ###### Minimal Stylus Syntax
+                .class1
+                .class2
+                  position relative
+                  color blue
+
+                  &:hover
+                    color red
+
+      :markdown
+
+        There are some rare exceptions to the multiple selectors on new lines rule. These mainly occur in the base stylesheet. Use your judgement to decide if selectors benefit from being on one line:
+
+            h1, h2, h3, h4, h5, h6
+              font-weight bold
+
+
+  .section
+    .centering
+      :markdown
+
+        ## Formatting
+
+        While we always use double quotes for standard CSS, we use single quotes in Stylus. These are quicker and easier to write, and automatically compiled to double quotes when the CSS is generated.
+
+
+  .section
+    .centering
+      :markdown
+
+        ## Nesting
+
+        One of the most important things to understand when writing CSS through a pre-processor, is how your final compiled CSS will look. What saves loads of time in development, can produce bloated slow code that will forever degrade the final performance of your product. This is related to the "Over Qualifying Selectors" section of the CSS Guidelines.
+
+      .grid
+        .grid__item.one-whole.lapdesk-one-half
+          :markdown
+            ###### Too much nesting
+
+                .wrapper
+                  .main-header
+                    ul.main-navigation
+                    width 100%
+                    li
+                      float left
+                      a
+                        color #555
+                        &:hover
+                          color #000
+
+        .grid__item.one-whole.lapdesk-one-half
+          :markdown
+            ###### Compiles to
+
+                .wrapper .main-header ul.main-navigation {
+                  width: 100%;
+                }
+                .wrapper .main-header ul.main-navigation li {
+                  float: left;
+                }
+                .wrapper .main-header ul.main-navigation li a {
+                  color: #555;
+                }
+                .wrapper .main-header ul.main-navigation li a:hover {
+                  color: #000;
+                }
+
+      .grid
+        .grid__item.one-whole.lapdesk-one-half
+          :markdown
+            ###### Improved Nesting
+
+                .main-navigation
+                  width 100%
+                  li
+                    float left
+                  a
+                    color #555
+                    &:hover
+                    color #000
+
+        .grid__item.one-whole.lapdesk-one-half
+          :markdown
+            ###### Compiles to:
+
+                .main-navigation ul {
+                  width: 100%;
+                }
+                .main-navigation li {
+                  float: left;
+                }
+                .main-navigation a {
+                  color: #555;
+                }
+                .main-navigation a:hover {
+                  color: #000;
+                }
+
+      :markdown
+        These achieve the same effect, but the first example takes 36% more code to do the same thing. That is a lot of extra code for such a small example - imagine that same effect across an entire project!
+
+        Be aware of indentation levels and be sure that the things you are nesting definitely need to be nested.
+
+        Notice in the second example that the `li` styles aren’t nested inside the `ul` styles, and the a styles aren’t nested inside the `li` styles. We can do this with confidence, as we know that all links within `.main-navigation` should be within `li` elements, which themselves will live inside a list element. Our CSS doesn’t need to know this.
+
+        Also notice that we didn’t need to tell our CSS that the .main-navigation appears within the `.main-header` or the `.wrapper` element. It will be styled the same regardless.
+
+
+  .section
+    .centering
+      :markdown
+        #### Still to write / review
+
+        * Why Stylus
+        * Features - mixins, nesting, variable, extending
+        * Extras - nib for vendor prefixes, gradients etc.
+        * Warnings - over-nesting, extending within media queries, extend - a fools gold

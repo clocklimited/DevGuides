@@ -1,0 +1,148 @@
+extend ../layouts/default
+
+block content
+  .section
+    .centering
+      :markdown
+
+        Class names should *always* be written as lowercase and hyphenated. They should also be written with readability in mind. It's better to have longer memorable classnames, than indecipherable shorthands.
+
+        When deciding on class names, favour names which don't directly describe an element's appearance: `<a class="button-primary">` is a better choice than `<a class="big-blue-button">`, especially when the time comes to redesign the site.
+
+      .grid
+        .grid__item.one-whole.lapdesk-one-half
+          :markdown
+            ###### Good Class Names
+                .main-header
+                .site-title
+                .widget-sidebar
+
+        .grid__item.one-whole.lapdesk-one-half
+          :markdown
+            ###### Bad Class Names
+                .hdr
+                .siteTitle
+                .wg_sb
+
+  .section
+    .centering
+      :markdown
+
+
+        ## JavaScript Classes
+
+        When adding JavaScript functionality to your project, avoid targetting existing classes with your JS. Instead add a class with a `js-` prefix to the element you are targetting. This separates style from functionality and allows for the classes to be moved or renamed independantly if needed. It also allows you to choose class names which more accurately describe what is intended.
+
+            <button class="btn-primary .js-btn-hide">Hide Me!<button>
+            <style>
+              .btn-primary {
+                color: blue;
+              }
+            </style>
+            <script>
+              $('.js-btn-hide').hide()
+            </script>
+
+  .section
+    .centering
+      :markdown
+
+        ## What about IDs?
+
+        Avoid using id attributes in your HTML, unless they are being used for linking (using a fragment identifier)<sup><a class="reference-link" href="#ref-ids"></a></sup>.
+
+        They should never be used as a CSS hook as they add too much specificity to that particular element's styles. If you need to style a unique element, just choose a unique class name instead, or even prefix the class with `unique-`.
+
+
+
+
+  .section
+    .centering
+      :markdown
+
+        ## BEM Naming Convention
+
+        Make use of the BEM ('Block, Element, Modifier') naming convention wherever possible. BEM is designed to help recognise, organise and convey patterns and modules within code.
+
+        ### Blocks
+
+        Think of 'blocks' as sections of a layout – widgets, headers, pagination etc. Blocks generally have classes which match their chosen name.
+
+            <div class="pagination">
+
+        ### Elements
+
+        Each block may be make up of multiple 'elements' – pagination may be made up of a summary paragraph, and a list of links to other pages. When adding classes to these elements, reference the parent block, then use a double underscore followed by the element name.
+
+            <ul class="pagination__link-list">
+
+        ### Modifiers
+
+        Modifiers are used whenever there are multiple variations of a block or element. When adding classes to a modified block or element, reference it's original class and use a double hyphen to add the modifier name.
+
+            <ul class="pagination__link-list--vertical">
+
+        ### Recognising Code
+
+        Although this seems long-winded, it has the advantage of making code more recognisable and organisable. The following example shows two unrelated blocks of HTML – a person and a clock. Although both of these blocks have hands and faces, they are in no way related.
+
+      .grid
+        .grid__item.one-whole.lapdesk-one-half
+          :markdown
+            ###### Block 1 without BEM
+                <div class="person">
+                  <div class="hand">
+                  </div>
+                  <div class="face">
+                  </div>
+                </div>
+
+        .grid__item.one-whole.lapdesk-one-half
+          :markdown
+            ###### Block 2 without BEM
+                <div class="clock">
+                  <div class="hand">
+                  </div>
+                  <div class="face">
+                  </div>
+                </div>
+
+      :markdown
+        If you come across one of these hand or face elements out of context, or referenced in your CSS, it would be hard to tell which type of block you were looking at.
+
+      .grid
+        .grid__item.one-whole.lapdesk-one-half
+          :markdown
+            ###### Block 1 with BEM
+                <div class="person">
+                  <div class="person__hand">
+                  </div>
+                  <div class="person__face">
+                  </div>
+                </div>
+
+        .grid__item.one-whole.lapdesk-one-half
+          :markdown
+            ###### Block 2 with BEM
+                <div class="clock">
+                  <div class="clock__hand">
+                  </div>
+                  <div class="clock__face">
+                  </div>
+                </div>
+
+      :markdown
+        Once you apply the BEM convention, each element becomes recognisable, even in isolation.
+
+        Note: Whilst the BEM naming convention is incredibly useful, it doesn't work in every situation. Use your best judgement to decide on a module-by-module basis whether BEM fits.
+
+        For further reading, Harry Roberts has written this great article:  
+        [MindBEMding – getting your head ’round BEM syntax](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/).
+
+  .section.section-references
+    .centering
+      :markdown
+
+        ### References
+
+        * <a id="ref-ids" href="http://csswizardry.com/2011/09/when-using-ids-can-be-a-pain-in-the-class/">CSS Wizardry – When using IDs can be a pain in the class</a>

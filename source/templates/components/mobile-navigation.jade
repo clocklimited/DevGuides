@@ -1,0 +1,24 @@
+ul.nav-list
+
+    li.has-subnav
+      a(href='/html', class=((section === 'html') ? 'active' : null)) HTML
+      .subnav
+
+    li.has-subnav
+      a(href='/css', class=((section === 'css') ? 'active' : null)) CSS
+      button.btn-link.nav-expand.js-nav-expand
+        i.icon-nav-expand
+      ul.subnav
+        li: a(href='/css/base-styles') Base Styles
+        li: a(href='/css/oocss') OOCSS
+
+    li
+      a(href='/js') JavaScript
+
+    li.has-subnav
+      a(href='/documents') Documents
+      button.btn-link.nav-expand.js-nav-expand
+        i.icon-nav-expand
+      ul.subnav
+        li: a(href='/documents/browser-support') Browser Support
+        li: a(href='/documents/design-deliverables') Design Deliverables

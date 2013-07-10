@@ -1,0 +1,19 @@
+nav.main-navigation
+
+  ul.nav-list
+
+    li.section-html.has-subnav
+      a(href='/html', class=((section === 'html') ? 'active' : null)) HTML
+      include subnav/html
+
+    li.section-css.has-subnav
+      a(href='/css', class=((section === 'css') ? 'active' : null)) CSS
+      include subnav/css
+
+    li.section-javascript.has-subnav
+      a(href='/js', class=((section === 'javascript') ? 'active' : null)) JavaScript
+      include subnav/javascript
+
+    li.section-documents.has-subnav
+      a(href='/documents', class=((section === 'documents') ? 'active' : null)) Documents
+      include subnav/documents
