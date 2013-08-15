@@ -80,6 +80,20 @@
       , "title": "Style Guide"
       }
     }
+  , { "template": "js-setup"
+    , "data":
+      { "bodyClass": "section-javascript page-javascript-setup language-javascript"
+      , "section": "javascript"
+      , "title": "Our Setup"
+      }
+    }
+  , { "template": "js-tips"
+    , "data":
+      { "bodyClass": "section-javascript page-javascript-tips language-javascript"
+      , "section": "javascript"
+      , "title": "Tips"
+      }
+    }
   , { "template": "documents-overview"
     , "data":
       { "bodyClass": "section-documents page-documents-overview"
@@ -131,6 +145,9 @@
   , "/css/modular-css": "css-modular-css"
   , "/js": "js-overview"
   , "/js/style-guide": "js-style-guide"
+  , "/js/setup": "js-setup"
+  , "/js/npm": "js-npm"
+  , "/js/tips": "js-tips"
   , "/documents": "documents-overview"
   , "/documents/browser-support": "documents-browser-support"
   , "/documents/design-deliverables": "documents-design-deliverables"

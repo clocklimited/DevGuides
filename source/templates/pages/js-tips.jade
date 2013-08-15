@@ -1,0 +1,63 @@
+extend ../layouts/default
+
+block content
+  .section
+    .centering
+      :markdown
+
+          ## Putting JavaScript on the page
+
+          All JS that you want on the page should be in the dependency tree from the
+          browserify bundle entry point, i.e it should be `require()`d by the
+          main file, or by some module that is. The bundle should be included
+          within a script tag at the end of the `<body>` element.
+
+          There are two common exceptions to this rule:
+
+          1. **jQuery** - We get jQuery from the Google CDN. For this reason it is
+            added to the page separately to the browserify bundle. Lots of our browser
+            code will rely on jQuery, so it should be included before the bundle.
+
+          2. **Modernizr** - Modernizr must run in the `<head>`. For this reason
+            it is added separately to the page and within the `<head>` element.
+
+          **In no circumstances should any JS be added to the page outside the bundle,
+          unless there is substantial reason to do so.**
+
+  .section
+    .centering
+      :markdown
+
+          ## File Structure
+
+
+  .section
+    .centering
+      :markdown
+
+          ## Avoiding jQuery-itis
+
+  .section
+    .centering
+      :markdown
+
+          ## Templating
+
+
+  .section
+    .centering
+      :markdown
+
+          ## Naming Handler Functions
+
+  .section
+    .centering
+      :markdown
+
+          ## Document Ready
+
+  .section
+    .centering
+      :markdown
+
+          ## Avoiding Global Scope
