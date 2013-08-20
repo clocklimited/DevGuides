@@ -146,7 +146,6 @@
   , "/js": "js-overview"
   , "/js/style-guide": "js-style-guide"
   , "/js/setup": "js-setup"
-  , "/js/npm": "js-npm"
   , "/js/tips": "js-tips"
   , "/documents": "documents-overview"
   , "/documents/browser-support": "documents-browser-support"

@@ -12,7 +12,7 @@ block content
         [browserify](http://github.com/substack/browserify) build every time a piece of code
         changes. We set up our text editors with [jshint](https://npmjs.org/package/jshint)
         to enforce our [style guide](/js/style-guide). We test our code with [mocha](https://npmjs.org/package/mocha)
-        and publish reuseable modules to the [npm repository](/js/npm).
+        and publish reuseable modules to the npm registry.
 
   .section
     .centering
@@ -59,7 +59,7 @@ block content
 
         By separating our code into modules, it increases **testability** and **resusablility**. If a module
         you have authored inside your application might be ever be useful on any other project, you should
-        consider [publishing it to npm](/js/npm).
+        consider publishing it to npm.
 
         #### Bundling
 
@@ -105,16 +105,3 @@ block content
         As well as making the inclusion of Jade templates seamless, the fact the templates are pre-compiled
         means that only the Jade runtime needs to be included in the output bundle, and not the whole complier
         (200 vs. thousands of lines of code).
-
-  .section
-    .centering
-      :markdown
-        More!
-
-      //- ## Overview
-
-      //- * Use of the `<button>` element is preferable in places. We generally use these in place of links when there is no fallback href attribute – usually when triggering JS functionality with no required level of fallback.
-
-      //- * jQuery, zepto etc
-      //- * Modernizr, inc, rules for adding modules when needed
-      //- * common plugins: break.js
