@@ -172,9 +172,9 @@ block content
           That means our JS can bring in templates like so:
 
               var compileJade = require('browjadify')
-                , tmpl = compileJade(__dirname + '/')
+                , template = compileJade(__dirname + '/person.jade')
 
-              var myHtml = tmpl({ /* template data */ })
+              var myHtml = template({ /* template data */ })
 
   .section
     .centering
