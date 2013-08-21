@@ -28,6 +28,64 @@ block content
     .centering
       :markdown
 
+          ## Document Ready
+
+          Lots of jQuery tutorials and examples encouraged large bodies of code
+          inside the `$(function () { /* code here */ })` shorthand. This runs the code on
+          the document 'ready' event.
+
+          This was useful when JS was typically loaded in the `<head>` of the document.
+          Since we load our bundle just before the close of the `<body>`, we are
+          guaranteed that any html elements are already loaded in the DOM and are
+          'ready'. You should only run code on document ready if you need access to
+          HTML that comes after the script that is running. This will be very rare,
+          so you should be explicit about it (don't use the shorthand) and comment
+          well:
+
+              $(document).on('ready', function () {
+                // I'm running on document#ready because…  
+              })
+
+  .section
+    .centering
+      :markdown
+
+          ## Dealing With Global Scope
+
+          When running in a standard browser environment, it was conventional to
+          wrap code in a self-executing, annoymous function:
+
+              (function () {
+                
+                // Anything assigned here will not be in global scope
+
+              }())
+
+          This pattern is completely unnecessary with our setup, as browserify wraps each
+          module in its own scope. You shoud **not** use it.
+
+          If, on the other hand, you *want* something to be global, you should explicitely
+          add it to a global object like `window`:
+
+              window.smiley = ':)'
+
+  .section
+    .centering
+      :markdown
+
+        ## Use Buttons
+        
+        Use of the `<button>` element is preferable in places. We generally use these
+        in place of links when there is no fallback href attribute – usually when
+        triggering JS functionality with no required level of fallback. Using an `<a>`
+        is inconvenient and inappropriate, as we need to give it an irrelevant href
+        and prevent the bubbling of the click event, only to achieve the functionality of
+        a button.
+
+  .section
+    .centering
+      :markdown
+
           ## File Structure
 
           The main frontend JS directory should contain the top level directories:
@@ -186,58 +244,3 @@ block content
               $('a').off('click', logClick)
 
               // This explicitely removes the function that we bound ourselves
-
-  .section
-    .centering
-      :markdown
-
-          ## Document Ready
-
-          Lots of jQuery tutorials and examples encouraged large bodies of code
-          inside the `$(function () { /* code here */ })` shorthand. This runs the code on
-          the document 'ready' event.
-
-          This was useful when JS was typically loaded in the `<head>` of the document.
-          Since we load our bundle just before the close of the `<body>`, we are
-          guaranteed that any html elements are already loaded in the DOM and are
-          'ready'. You should only run code on document ready if you need access to
-          HTML that comes after the script that is running. This will be very rare,
-          so you should be explicit about it (don't use the shorthand) and comment
-          well:
-
-              $(document).on('ready', function () {
-                // I'm running on document#ready because…  
-              })
-
-  .section
-    .centering
-      :markdown
-
-          ## Dealing With Global Scope
-
-          When running in a standard browser environment, it was conventional to
-          wrap code in a self-executing, annoymous function:
-
-              (function () {
-                
-                // Anything assigned here will not be in global scope
-
-              }())
-
-          This pattern is completely unnecessary with our setup, as browserify wraps each
-          module in its own scope. You shoud **not** use it.
-
-          If, on the other hand, you *want* something to be global, you should explicitely
-          add it to a global object like `window`:
-
-              window.smiley = ':)'
-
-  .section
-    .centering
-      :markdown
-
-        ## Use Buttons
-        
-        Use of the `<button>` element is preferable in places. We generally use these
-        in place of links when there is no fallback href attribute – usually when
-        triggering JS functionality with no required level of fallback.
