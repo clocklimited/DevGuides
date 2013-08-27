@@ -129,6 +129,13 @@
       , "title": "Working With Sublime"
       }
     }
+  , { "template": "not-found"
+    , "data":
+      { "bodyClass": "not-found"
+      , "section": "not-found"
+      , "title": "Not Found"
+      }
+    }
   ]
 , "stylesheets":
   [ "index"

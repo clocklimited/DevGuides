@@ -3,34 +3,47 @@ module.exports = serve
 var fs = require('fs')
   , connect = require('connect')
   , config = require(__dirname + '/config')
-  , Stream = require('stream')
 
 function serve() {
 
   function router(req, res, next) {
     var route = config.routes[req.url]
     if (route) {
-      fs.createReadStream(__dirname + '/preview/' + route + '.html').pipe(res)
+      var readStream = fs.createReadStream(__dirname + '/output/' + route + '.html')
+      readStream.pipe(res)
+      readStream.on('error', function (e) {
+        console.log(e.stack)
+        res.end()
+      })
     } else {
       next()
     }
   }
 
+  function notFound(req, res, next) {
+    var readStream = fs.createReadStream(__dirname + '/output/not-found.html')
+    res.statusCode = 404
+    readStream.pipe(res)
+    readStream.on('error', function () {
+      next()
+    })
+  }
+
   var server = connect()
     .use(connect.logger('dev'))
     .use(router)
-    .use(connect.static(__dirname + '/preview'))
+    .use(connect.static(__dirname + '/output'))
+    .use(notFound)
     .listen(config.port || 3000)
 
   console.log(
-  [ ''
-  , '  Connect server listening on http://localhost:' + server.address().port
-  , ''
-  , '  Available routes:'
-  , '  `' + Object.keys(config.routes).join('`, \n  `') + '`'
-  , ''
-  ].join('\n')
-  )
+    [ ''
+    , '  Connect server listening on http://localhost:' + server.address().port
+    , ''
+    , '  Available routes:'
+    , '  `' + Object.keys(config.routes).join('`, \n  `') + '`'
+    , ''
+    ].join('\n'))
 
 }
 
