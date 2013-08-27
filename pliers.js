@@ -22,7 +22,7 @@ function tasks(pliers) {
   pliers.filesets('jade', join(__dirname, 'source', 'templates', '**/*.jade'))
 
   pliers('structure', function (done) {
-    mkdirs(__dirname, [ join('preview', 'resource', 'css') ], function (err) {
+    mkdirs(__dirname, [ join('output', 'resource', 'css') ], function (err) {
       if (err) {
         pliers.logger.error('Failed to compile jade templates')
         pliers.logger.error(err.message)
@@ -35,7 +35,7 @@ function tasks(pliers) {
 
     copy(
       { src: join(__dirname, 'source', 'resource')
-      , dest: join(__dirname, 'preview', 'resource')
+      , dest: join(__dirname, 'output', 'resource')
       , logger: pliers.logger
       , excludes: [/^\./, /^css\/$/]
       }, function (err) {
@@ -51,7 +51,7 @@ function tasks(pliers) {
   pliers('css', function (done) {
     renderStylus(config.stylesheets.map(function (file) { return file + '.styl' }),
       { src: join(__dirname, 'source', 'resource', 'css')
-      , dest: join(__dirname, 'preview', 'resource', 'css')
+      , dest: join(__dirname, 'output', 'resource', 'css')
       }
       , function (err) {
         if (err) {
@@ -65,7 +65,7 @@ function tasks(pliers) {
   pliers('jade', function (done) {
     renderJade(config.pages,
       { src: join(__dirname, 'source', 'templates', 'pages')
-      , dest: join(__dirname, 'preview')
+      , dest: join(__dirname, 'output')
       }
       , function (err) {
         if (err) {

@@ -32,4 +32,4 @@ Icon?
 node_modules
 
 # Project specific
-preview/*
+output/*
