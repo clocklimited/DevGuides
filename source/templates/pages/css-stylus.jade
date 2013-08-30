@@ -11,9 +11,9 @@ block content
         >
         > <small><cite>[learnboost.github.io/stylus/](http://learnboost.github.io/stylus/)</cite></small>
 
-        Stylus is a CSS preprocessor, similar to LESS and Sass. It features the most minimal syntax of these three. It has huge benefits over regular CSS in terms of speed of writing and dynamic features.
+        Stylus is a CSS preprocessor, similar to LESS and Sass. It features the most minimal syntax of these three and has huge benefits over regular CSS in terms of speed of writing and dynamic features.
 
-        When writing Stylus, use the same guidelines as when writing CSS. However, there are a few major differences to keep in mind.
+        When writing Stylus, use the same guidelines as when writing CSS. However there are a few major differences to keep in mind which are outlined in this document.
 
   .section
     .centering
@@ -21,7 +21,7 @@ block content
 
         ## General Syntax
 
-        Whilst you can write Stylus as if it were standard CSS, we prefer to remove all unnecessary punctuation and repetition. When using multiple selectors in a single rule, we write each on a new line, without trailing commas.
+        Whilst you can write Stylus as if it were standard CSS, we prefer to remove all unnecessary punctuation and repetition. The only exception when removing punctuation are the commas which appear between multiple selectors in a single rule. We write each selector on a new line, and leave trailing commas to make it obvious that the rule is matching multiple selectors.
 
       .grid
         .grid__item.one-whole.lapdesk-one-half
@@ -40,7 +40,7 @@ block content
         .grid__item.one-whole.lapdesk-one-half
           :markdown
             ###### Minimal Stylus Syntax
-                .class1
+                .class1,
                 .class2
                   position relative
                   color blue
