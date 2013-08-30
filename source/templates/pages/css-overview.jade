@@ -113,14 +113,14 @@ block content
       .grid
         .grid__item.one-whole.lapdesk-one-half
           :markdown
-            ###### Good Class Names
+            ###### Bad Selector
                 header ul.main-navigation li a {
                   color: #555
                 }
 
         .grid__item.one-whole.lapdesk-one-half
           :markdown
-            ###### Bad Class Names
+            ###### Good Selector
                 .main-navigation a {
                   color: #555
                 }
@@ -129,7 +129,7 @@ block content
 
         In the 'bad' example, there is no reason to specify that the `.main-navigation` class needs to live in the `<header>` element. What if we need to move it?
 
-        We are also saying that the `.main-navigation` class can only ever be applied to a `<ul>`. What if we need to switch to an `<ol>`?
+        We are also saying that the `.main-navigation` class can only ever be applied to a `<ul>`. What if we need to switch to an `<nav>`?
 
         We know that every `<a>` within our `.main-navigation` (which is a list) will be located inside an `<li>` – it would be invalid if it weren't. This means we don't need to specify `li a` in our selector, we can simply use `a`.
 
@@ -142,24 +142,55 @@ block content
 
         ## Code Commenting
 
-        *[This section needs examples of CSS comments]*
-
         Within well organised files, code comments are invaluable to help developers navigate through projects and complete their work.
 
         CSS files should have a title at the top, describing the file's purpose.
 
+            /*
+             * TYPOGRAPHY
+             * ==========
+             * This file forms a basic typographical reset,
+             * which normalises styles across all browsers.
+             *
+             * 1. Base styles
+             * 2. Headings
+             * 3. Links
+             */
+
         Each section of the file should be grouped according to content and relevance, and titles should be used to clearly identify what a group of styles is for. Within these, sub-headers can be used to identify certain related content styles.
 
+            /*
+             * 2. HEADINGS
+             * ===========
+             */
 
-  .section
-    .centering
-      :markdown
+            h1 {
+              font-weight: bold;
+            }
 
-        ## Accessibility
+            /*
+             * LINKS WITHIN HEADINGS
+             * Ensure correct styles are applied when
+             * links appear within headings.
+             */
 
-        *[This section need explanations and further detail]*
+            h1 {
+              color: #c0ffee;
+            }
 
-        * Test navigation without mouse
-        * Don't use display: none; for image replacement
-        * Think carefully any time display: none; is used
+
+
+
+  //-
+    .section
+      .centering
+        :markdown
+
+          ## Accessibility
+
+          *[This section need explanations and further detail]*
+
+          * Test navigation without mouse
+          * Don't use display: none; for image replacement
+          * Think carefully any time display: none; is used
 
