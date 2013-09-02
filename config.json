@@ -38,6 +38,13 @@
       , "title": "Choosing Classes"
       }
     }
+  , { "template": "html-emails"
+    , "data":
+      { "bodyClass": "section-html page-html-emails language-markup"
+      , "section": "html"
+      , "title": "Building Emails"
+      }
+    }
   , { "template": "css-overview"
     , "data":
       { "bodyClass": "section-css page-css-overview language-css"
@@ -146,6 +153,7 @@
   , "/html/jade": "html-jade"
   , "/html/components": "html-components"
   , "/html/choosing-classes": "html-choosing-classes"
+  , "/html/emails": "html-emails"
   , "/css": "css-overview"
   , "/css/stylus": "css-stylus"
   , "/css/base-styles": "css-base-styles"
