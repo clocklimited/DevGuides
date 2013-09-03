@@ -69,15 +69,25 @@ block content
 
         2. Replace `margin` and `padding` with `cellspacing` and `cellpadding` - same reason as above
         
-        2. Inline comments - some browsers strip `<style>` tags
+        3. Inline comments - some browsers strip `<style>` tags
 
-        3. `table[class="table-class"]` - Yahoo! Mail
+        4. `table[class="table-class"]` - Yahoo! Mail
 
-        4. If embedding an external `font-family`, use `@import` rather than `<link>`- it'll work on Android that way
+        5. If embedding an external `font-family`, use `@import` rather than `<link>`- it'll work on Android that way
+
+        6. Don't use shorthand CSS values (e.g. `color: #eee`, `font: Arial 12px`)
+
+        7. Use the `bgcolor='#EEEEEE'` attribute rather than `style='background: #eeeeee'  
+        \- just for consistency, only give background colours via parent `<td>` tags
 
 
-        ### Can I use `@media` queries?
-        You sure can. The vast majority of mobile email clients now support it! For an up-to-date chart, check out [Campaign Monitor](http://www.campaignmonitor.com/guides/mobile/#mobile-support).
+  .section.section-references
+    .centering
+      :markdown
+        ## Can I use `@media` queries?
+        You sure can. The vast majority of mobile email clients now support it!
+
+        For an up-to-date chart on `@media` compatibility, check out [Campaign Monitor](http://www.campaignmonitor.com/guides/mobile/#mobile-support).
 
 
   .section.section-references
@@ -86,6 +96,4 @@ block content
 
         ### References
         * http://internations.github.io/antwort/
-        * http://www.campaignmonitor.com/css/
-        * http://www.campaignmonitor.com/blog/post/4003/tip-avoid-using-mailto-links-in-html-email
-        * http://www.campaignmonitor.com/blog/post/3897/using-web-fonts-in-email
+        * http://www.campaignmonitor.com/
