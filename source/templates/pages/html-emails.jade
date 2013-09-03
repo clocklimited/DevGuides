@@ -5,11 +5,9 @@ block content
     .centering
       :markdown
 
-        *This page is in the process of being written*
+        *This page is in the process of being written.*
 
-        ## Still to go:
-        * Some fascinating aspects about building emails
-        * Attempts to not winge about email clients rendering things dissimilarly
+        Emails are on of the greatest modern communication techniques in use today. 
         
 
   .section.blockquote--small
@@ -17,10 +15,10 @@ block content
       :markdown
         ## Design
 
-        1. _"Keep your emails to a fixed width of no more than 550-600 pixels"_  
+        1. *"Keep your emails to a fixed width of no more than 550-600 pixels"*  
           <small><cite>- [campaignmonitor.com](http://www.campaignmonitor.com/)</cite></small>
         
-        2. _"The average preview pane is around 300-500 pixels high, so make sure you include any important bits of your email in this area"_  
+        2. *"The average preview pane is around 300-500 pixels high, so make sure you include any important bits of your email in this area"*  
           <small><cite>- [campaignmonitor.com](http://www.campaignmonitor.com/)</cite></small>
 
         3. Don't shy away from custom fonts- but remember forget to provide a nice fallback
@@ -37,7 +35,7 @@ block content
         2. __Strip any common semantics__ (e.g. `<h1>`, `<h2>` etc)
           * Some clients render semantic markup in green. It baffles us too.
 
-        3. __Use double__ `<br/><br/>` __instead of__ `<p>` __tags__
+        3. __Use double__ `<br /><br />` __instead of__ `<p>` __tags__
           * Some clients render margins and padding on paragraph tags, whereas line-breaks are consistently rendered across all clients
           * Font styles can be declared once in the parent `<td>` rather than every `<p>`
           * Better readability of content, like in the below example:
@@ -50,7 +48,6 @@ block content
                         <br><br>
 
                         (Isn't it so much fun?)
-                        <br><br>
 
                       </td>
                     </tr>
@@ -65,6 +62,8 @@ block content
     .centering
       :markdown
         ## Styling
+
+        There are a few key principles you should adopt when building an email template:
 
         1. Avoid using `float` in your inline styles markup. [Outlook.com](http://outlook.com) recently dropped support, so it won't be long 
         before others do so too! If you want something 'floated' right, stick to using `align='right'` on your `<td>`.
@@ -85,19 +84,29 @@ block content
         \- just for consistency, only give background colours via parent `<td>` tags
 
 
-  .section.section-references
+  .section.faqs
     .centering
       :markdown
-        ## Can I use `@media` queries?
-        You sure can. The vast majority of mobile email clients now support it!
+        ## FAQs
 
-        For an up-to-date chart on `@media` compatibility, check out [Campaign Monitor](http://www.campaignmonitor.com/guides/mobile/#mobile-support).
+        #### Can I use `@media` queries?
+        You sure can. The vast majority of mobile email clients now support it! For an up-to-date chart on 
+        `@media` compatibility, check out [Campaign Monitor](http://www.campaignmonitor.com/guides/mobile/#mobile-support).
 
+        #### When's the best time to send emails?
+        In the billions of emails sent every day there are micro-trends- hour-by-hour, day-by-day. There's a great 
+        [Mailchimp article](http://kb.mailchimp.com/article/when-is-the-best-time-to-send-emails) which will give
+        you a good insight into these.
+
+        #### What about open rates?
+        It's possible (e.g. Goolge Analytics links in `<img />` tags). TBC.
 
   .section.section-references
     .centering
       :markdown
 
         ### Further reading
-        * http://internations.github.io/antwort/
+        * [SalesForce: 25 Mind Blowing Email Marketing Stats](http://blogs.salesforce.com/company/2013/07/email-marketing-stats.html)
+        * [LunaMetrics: Email Tracking with MailChimp](http://www.lunametrics.com/blog/2013/06/17/email-tracking-google-analytics/)
         * http://www.campaignmonitor.com/
+        * [Antwort: A responsive email template](http://internations.github.io/antwort/)
