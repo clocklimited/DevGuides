@@ -23,7 +23,7 @@ block content
         2. _"The average preview pane is around 300-500 pixels high, so make sure you include any important bits of your email in this area"_  
           <small><cite>- [campaignmonitor.com](http://www.campaignmonitor.com/)</cite></small>
 
-        3. Don't shy away from custom fonts- but don't forget to provide a fallback
+        3. Don't shy away from custom fonts- but remember forget to provide a nice fallback
 
   .section
     .centering
@@ -34,30 +34,32 @@ block content
           * Microsoft Outlook uses it's own Word markup processing engine. `<div>` tags therefore won't be rendered correctly. 
           * Some legacy browsers strip the root element unless it is a `<table>` tag
 
-        2. __Strip any common semantics__ (e.g. `<h1>`, `<>` etc)
-          * Some browsers render semantic markup in green. It baffles us too.
+        2. __Strip any common semantics__ (e.g. `<h1>`, `<h2>` etc)
+          * Some clients render semantic markup in green. It baffles us too.
 
         3. __Use double__ `<br/><br/>` __instead of__ `<p>` __tags__
           * Some clients render margins and padding on paragraph tags, whereas line-breaks are consistently rendered across all clients
           * Font styles can be declared once in the parent `<td>` rather than every `<p>`
-          * Better readability of content, like in the below example
+          * Better readability of content, like in the below example:
 
                   <table>
                     <tr>
                       <td style="font-size:12px; color: #888;">
 
-                      Welcome to the world of HTML emails.
-                      <br><br>
+                        Welcome to the world of HTML emails.
+                        <br><br>
 
-                      (Isn't it so much fun?)
-                      <br><br>
+                        (Isn't it so much fun?)
+                        <br><br>
 
                       </td>
                     </tr>
                   </table>
 
-        4. __Don't use the `mailto` prefix in your links__  
-          * Some email clients see your email as spam! 
+        4. __Don't use `mailto` in your links__  
+          * Encoding subject and body into it will create zero readability
+          * Some email clients see your email as spam if it has a `mailto` within 
+          * Create a online contact form instead- you can use analytic tools for tracking
 
   .section
     .centering
@@ -69,15 +71,17 @@ block content
 
         2. Replace `margin` and `padding` with `cellspacing` and `cellpadding` - same reason as above
         
-        3. Inline comments - some browsers strip `<style>` tags
+        3. Use inline styles `<td style='font-size: 12px'>` - some browsers strip `<style>` tags. If you're feeling 
+           particularly lazy, use [Mailchimp's inliner](http://beaker.mailchimp.com/inline-css) tool  
+           (But keep reading- there are still uses for `<style>`)
 
-        4. `table[class="table-class"]` - Yahoo! Mail
+        4. Steer clear of using dot-prefixed classNames (e.g. `.className`) - use `table[class="table-class"]` instead - Yahoo! Mail
 
         5. If embedding an external `font-family`, use `@import` rather than `<link>`- it'll work on Android that way
 
         6. Don't use shorthand CSS values (e.g. `color: #eee`, `font: Arial 12px`)
 
-        7. Use the `bgcolor='#EEEEEE'` attribute rather than `style='background: #eeeeee'  
+        7. Use the `<td bgcolor='#EEEEEE'>` attribute rather than `style='background: #eeeeee'  
         \- just for consistency, only give background colours via parent `<td>` tags
 
 
@@ -94,6 +98,6 @@ block content
     .centering
       :markdown
 
-        ### References
+        ### Further reading
         * http://internations.github.io/antwort/
         * http://www.campaignmonitor.com/
