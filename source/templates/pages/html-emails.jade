@@ -7,7 +7,7 @@ block content
 
         *This page is in the process of being written.*
 
-        Emails are on of the greatest modern communication techniques in use today. 
+        Emails are one of the greatest modern communication techniques in use today. 
         
 
   .section.blockquote--small
@@ -21,7 +21,7 @@ block content
         2. *"The average preview pane is around 300-500 pixels high, so make sure you include any important bits of your email in this area"*  
           <small><cite>- [campaignmonitor.com](http://www.campaignmonitor.com/)</cite></small>
 
-        3. Don't shy away from custom fonts- but remember forget to provide a nice fallback
+        3. Don't shy away from custom fonts- but remember to provide a nice fallback
 
   .section
     .centering
@@ -29,13 +29,16 @@ block content
         ## Structure
 
         1. __Use `<table>` regularly and often__ \(or just pretend you're back in the 90s)
-          * Microsoft Outlook uses it's own Word markup processing engine. `<div>` tags therefore won't be rendered correctly. 
+
+          * Microsoft Outlook uses it's own Word markup processing engine. `<div>` tags therefore won't be rendered correctly
           * Some legacy browsers strip the root element unless it is a `<table>` tag
 
         2. __Strip any common semantics__ (e.g. `<h1>`, `<h2>` etc)
+
           * Some clients render semantic markup in green. It baffles us too.
 
         3. __Use double__ `<br /><br />` __instead of__ `<p>` __tags__
+
           * Some clients render margins and padding on paragraph tags, whereas line-breaks are consistently rendered across all clients
           * Font styles can be declared once in the parent `<td>` rather than every `<p>`
           * Better readability of content, like in the below example:
@@ -44,7 +47,7 @@ block content
                     <tr>
                       <td style="font-size:12px; color: #888;">
 
-                        Welcome to the world of HTML emails.
+                        Welcome to the world of HTML emails!
                         <br><br>
 
                         (Isn't it so much fun?)
@@ -58,6 +61,8 @@ block content
           * Some email clients see your email as spam if it has a `mailto` within 
           * Create a online contact form instead- you can use analytic tools for tracking
 
+        5. __Ensure you always give `<img>` tags an alt attribute should they have descriptive meaning__
+
   .section
     .centering
       :markdown
@@ -66,7 +71,7 @@ block content
         There are a few key principles you should adopt when building an email template:
 
         1. Avoid using `float` in your inline styles markup. [Outlook.com](http://outlook.com) recently dropped support, so it won't be long 
-        before others do so too! If you want something 'floated' right, stick to using `align='right'` on your `<td>`.
+        before others do so too! If you want something 'floated' right, stick to using `align='right'` on your `<td>`
 
         2. Replace `margin` and `padding` with `cellspacing` and `cellpadding` - same reason as above
         
@@ -80,8 +85,7 @@ block content
 
         6. Don't use shorthand CSS values (e.g. `color: #eee`, `font: Arial 12px`)
 
-        7. Use the `<td bgcolor='#EEEEEE'>` attribute rather than `style='background: #eeeeee'  
-        \- just for consistency, only give background colours via parent `<td>` tags
+        7. Only give background colour to `<td>` tags & use the `bgcolor='#EEEEEE'` attribute rather than `style='background: #eeeeee'`
 
 
   .section.faqs
