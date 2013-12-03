@@ -129,6 +129,13 @@
       , "title": "Working With Sublime"
       }
     }
+  , { "template": "documents-front-end-processes"
+    , "data":
+      { "bodyClass": "section-documents page-documents-front-end-processes"
+      , "section": "documents"
+      , "title": "Front-End Processes"
+      }
+    }
   , { "template": "not-found"
     , "data":
       { "bodyClass": "not-found"
@@ -159,6 +166,7 @@
   , "/documents/design-deliverables": "documents-design-deliverables"
   , "/documents/go-live-checklist": "documents-go-live-checklist"
   , "/documents/working-with-sublime": "documents-working-with-sublime"
+  , "/documents/front-end-processes": "documents-front-end-processes"
   }
   , "compressCSS": true
   , "stylusLinenos": false

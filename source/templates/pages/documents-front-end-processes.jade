@@ -1,0 +1,88 @@
+extend ../layouts/default
+
+block content
+
+  .section
+    .centering
+      :markdown
+
+        Follow these processes during your day-to-day work to make sure your 
+        output is as optimal as possible.
+
+  .section
+    .centering
+      :markdown
+
+        ## Optimising CSS / Stylus
+
+        * CSS Linting
+        * CSS Validation
+        * Stylus mixin testing
+        * Check nesting levels / Quality of generated CSS
+          * Write tests?
+          * Look at vendorprefixes in animation – is using sub-prefixes, write by hand?
+          * check extends
+        * comments
+        * File/folder structure is maintainable
+
+  .section
+    .centering
+      :markdown
+
+        ## Optimising HTML / Jade
+
+        * HTML Validation
+        * A11y testing
+        * grid elements share no other classes
+        * mixins where necessary
+
+  .section
+    .centering
+      :markdown
+
+        ## Optimising Images
+
+        Run [ImageOptim](http://imageoptim.com/) to optimise all images in the project. This can be run multiple times. *[explain how to tell if images can be further optimised]*
+
+        To optimise all images in a folder, run:
+
+            find path/to/images/folder -name "*.png" -o -name "*.jpg" -o -name "*.gif" | xargs -I {} open -a ImageOptim.app {}
+
+        Use [ImageAlpha](http://pngmini.com/) to add lossy compression to large .png files
+
+        Use sprites
+
+        Retina / svg images etc.
+
+  .section
+    .centering
+      :markdown
+
+        ## Fonts
+
+        * Subsetting
+        * Icon fonts
+
+  .section
+    .centering
+      :markdown
+
+        ## VersionPath
+
+        * tests
+
+  .section
+    .centering
+      :markdown
+
+        ## Browser Testing
+
+        * Browserstack
+        * VMs
+        * Check project browser support
+
+  .section
+    .centering
+      :markdown
+
+        ## Danger Testing
