@@ -122,6 +122,13 @@
       , "title": "Go-Live Checklist"
       }
     }
+  , { "template": "documents-meta-content"
+    , "data":
+      { "bodyClass": "section-documents page-documents-meta-content language-markup"
+      , "section": "documents"
+      , "title": "Meta Content"
+      }
+    }
   , { "template": "documents-working-with-sublime"
     , "data":
       { "bodyClass": "section-documents page-documents-working-with-sublime language-javascript"
@@ -158,6 +165,7 @@
   , "/documents/browser-support": "documents-browser-support"
   , "/documents/design-deliverables": "documents-design-deliverables"
   , "/documents/go-live-checklist": "documents-go-live-checklist"
+  , "/documents/meta-content": "documents-meta-content"
   , "/documents/working-with-sublime": "documents-working-with-sublime"
   }
   , "compressCSS": true
