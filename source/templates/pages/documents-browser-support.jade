@@ -6,12 +6,220 @@ block content
     .centering
       :markdown
 
-        We endeavour to ensure our sites work correctly in Chrome, Safari, Firefox and Opera. Each of these we test in the current major release, and one version previous.
+        We endeavour to ensure our sites work correctly in Chrome, Safari, Firefox and Opera. Their automatic upgrade processes ensure that the majority of users will be using the latest version of these browsers. As a result of this, we test each in their current major release, and one version previous. Internet Explorer is fully supported from IE9+. Further information regarding older versions of IE is covered in more detail later in this document.
 
-        Internet Explorer has many limitations and as a result, we will make sure our projects work to an acceptable level in IE8 and above, with a usable level of fallback support for IE7. As an example, differences may include the absence of some aesthetic elements such as rounded corners or drop shadows on elements, or small changes to layouts and positioning. IE9 and above are the only versions of Internet Explorer to fully support responsive design. IE8 and lower will display the desktop view of the project only.
+        All browsers have varying levels of support for advanced features such as CSS animation and HTML5 APIs. Where possible, we will provide suitable fallbacks for browsers which don't support these features.
 
-        All browsers have varying levels of support for advanced features such as CSS animation. Where possible, we will provide suitable fallbacks for browsers which don't support these features.
+        Most projects also have a reliance on JavaScript for more dynamic features such as slideshows, tabbed elements and live data loading/sorting. The few users who don't have JavaScript enabled will receive basic, reduced functionality versions of these features.
 
-        Most projects also have a reliance on JavaScript for more advanced dynamic features such as slideshows, tabbed elements and live data sorting. The few users who don't have JavaScript enabled will receive basic, reduced functionality versions of these features.
+  .section
+    .centering
+      :markdown
 
-        Support for iOS and Android (Mobile and Tablet) devices are: current operating system version and one version previous, using the standard built in browser. We will test in other third-party browser apps but their feature support may vary.
+        ## Older Versions of Internet Explorer
+
+        Versions of Internet Explorer before IE9 have many limitations. As a result, we will make sure our projects work to an acceptable level in IE8 although some compromises are unavoidable. As an example, differences may include the absence of some aesthetic elements such as rounded corners or drop shadows on elements, or changes to layouts and positioning. IE9 and above are the only versions of Internet Explorer to fully support responsive design. IE8 will display the desktop view of the project only.
+
+  .section
+    .centering
+      :markdown
+
+        ## Mobile Devices
+
+        **iOS**: Safari (default browser) is tested for the current version of iOS, and one version previous.
+
+        **Android**: Google Chrome (default browser) is tested in Android 4.1 (Jelly Bean) and above.
+
+        **Windows Phone**: Internet Explorer Mobile (default browser) is tested in Windows Phone 8 and above.
+
+  .section
+    .centering
+      :markdown
+
+        ## Extended Support
+        If a project requires, we can extend support for specific browsers and devices, although this will have an impact on deadlines and project budgets.
+
+        #### Older Versions of Supported Browsers
+        The browser and devices listed above are the versions we *actively* test in. Generally speaking, older versions of Chrome, Firefox and Safari browsers will behave as expected in terms of functionality but may exhibit some aesthetic differences.
+
+        #### Android
+        We can additionally offer support for Android 2.3 (Gingerbread) and 4.0 (Ice Cream Sandwich) which use a built-in stock default browser.
+
+        #### Internet Explorer 7
+        The latest release of IE7 was in 2007, and its global usage is currently below 0.4% and falling. The disproportionately large amount of time taken to make sites work in IE7.
+
+        #### Third-Party Browser Apps
+        Browsers such as Chrome or Opera Mini for iOS, or Firefox for Android are not covered in the scope of our standard support list. Whilst these should work as expected, we can offer extended support to fully test projects using these browsers. Due to the large range of third-party browsers available, feature support may vary per-browser.
+
+
+
+
+  //- 
+    .section
+      .centering
+
+        h2 Desktop Browsers
+
+        table
+          thead
+            tr
+              th Browser
+              th OS
+              th Support Level
+              th Actively Tested
+          tbody
+            tr
+              td Chrome
+              td OS X, Windows, Linux
+              td Level 1
+              td Current-1 (30+)
+            tr
+              td Firefox
+              td OS X, Windows, Linux
+              td Level 1
+              td Current-1 (24+)
+            tr
+              td Safari
+              td OS X
+              td Level 1
+              td Current-1 (6+)
+            tr
+              td Opera
+              td OS X, Windows, Linux
+              td Level 2
+              td On Request
+            tr
+              td IE 11, IE 10, IE 9
+              td Windows
+              td Level 1
+              td Yes
+            tr
+              td IE 8
+              td Windows
+              td Level 2
+              td Yes
+            tr
+              td IE 7
+              td Windows
+              td Level 3
+              td On Request
+
+    .section
+      .centering
+
+        h2 Mobile Browsers
+        h3 iOS
+
+        table
+          thead
+            tr
+              th Browser
+              th OS
+              th Support Level
+              th Actively Tested
+          tbody
+            tr
+              td Safari
+              td iOS 6+
+              td Level 1
+              td Yes
+            tr
+              td Chrome
+              td iOS 6+
+              td Level 2
+              td On Request
+            tr
+              td Opera
+              td iOS 6+
+              td Level 2
+              td On Request
+
+        h3 Android
+
+        table
+          thead
+            tr
+              th Browser
+              th OS
+              th Support Level
+              th Actively Tested
+          tbody
+            tr
+              td Chrome
+              td X.X
+              td Level 1
+              td Yes
+            tr
+              td Opera
+              td X.X
+              td Level 2
+              td On Request
+            tr
+              td Firefox
+              td X.X
+              td Level 2
+              td On Request
+            tr
+              td “Browser”
+              td X.X
+              td Level 2
+              td On Request
+
+
+        h3 Windows RT / Windows Phone
+
+        table
+          thead
+            tr
+              th Browser
+              th OS
+              th Support Level
+              th Actively Tested
+          tbody
+            tr
+              td IE 11
+              td Windows RT 8 +
+              td Level 1
+              td Yes
+            tr
+              td IE 10 Mobile
+              td Windows Phone 8 +
+              td Level 2
+              td On Request
+
+  //-
+    .section
+      .centering
+
+        p Older versions of Desktop/Mobile browsers, as well as Pre-release / Beta versions of browsers are not actively tested but may still work as expected.
+
+        small All version numbers listed are correct as of 4th Dec 2013. Supported versions may have changed if browsers have relased updates since this time.
+
+  //-
+    .section
+      .centering
+        :markdown
+
+          ## Support Levels
+
+          **Level 1: Full support.**
+
+          * Features will work as expected.
+          * Styling variations between browsers will be minimal.
+          * Fully tested and bugs fixed.
+
+          **Level 2: Partial Support.**
+
+          * Features will work as expected.
+          * Some styling may be affected due to poor browser support (Responsive design, rounded corners, canvas etc.). Graceful degradation will be provided where possible.
+          * Fully tested and priority bugs fixed.
+
+          **Level 3: Basic Support.**
+
+          * Primary, project-critical features will work.
+          * Secondary features may not work as expected, but will not interfere with primary features.
+          * Styling may not appear as expected due to poor browser support.
+
+          **Level 4: Unsupported.**
+
+          * Not supported or tested.
