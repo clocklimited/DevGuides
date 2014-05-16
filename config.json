@@ -101,13 +101,6 @@
       , "title": "Documents"
       }
     }
-  , { "template": "documents-browser-support"
-    , "data":
-      { "bodyClass": "section-documents page-documents-browser-support"
-      , "section": "documents"
-      , "title": "Browser Support"
-      }
-    }
   , { "template": "documents-design-deliverables"
     , "data":
       { "bodyClass": "section-documents page-documents-design-deliverables"
