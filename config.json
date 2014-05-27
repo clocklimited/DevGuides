@@ -122,6 +122,13 @@
       , "title": "Working With Sublime"
       }
     }
+  , { "template": "documents-our-favourite-resources"
+    , "data":
+      { "bodyClass": "section-documents page-documents-our-favourite-resources"
+      , "section": "documents"
+      , "title": "Our Favourite Resources"
+      }
+    }
   , { "template": "not-found"
     , "data":
       { "bodyClass": "not-found"
@@ -152,6 +159,7 @@
   , "/documents/design-deliverables": "documents-design-deliverables"
   , "/documents/go-live-checklist": "documents-go-live-checklist"
   , "/documents/working-with-sublime": "documents-working-with-sublime"
+  , "/documents/our-favourite-resources": "documents-our-favourite-resources"
   }
   , "compressCSS": true
   , "stylusLinenos": false
