@@ -3,14 +3,16 @@
   "name": "FrontEndGuidelines",
   "version": "0.0.0",
   "devDependencies": {
-    "directory-structure": "~0.0.2",
+    "connect": "~2.7.2",
     "directory-copy": "~0.0.4",
-    "stylus-renderer": "~0.0.2",
+    "directory-structure": "~0.0.2",
+    "jade": "~0.28.1",
     "jade-renderer": "~0.0.4",
+    "lodash.map": "^2.4.1",
+    "marked": "~0.2.8",
     "nib": "~0.9.1",
     "stylus": "~0.32.0",
-    "jade": "~0.28.1",
-    "connect": "~2.7.2",
-    "marked": "~0.2.8"
+    "stylus-renderer": "~0.0.2",
+    "tiny-lr": "0.0.7"
   }
 }

@@ -7,12 +7,48 @@ var path = require('path')
   , renderStylus = require('stylus-renderer')
   , renderJade = require('jade-renderer')
   , config = require('./config')
-
-try {
-  var notify = require('growl')
-} catch (e) {}
+  , exec = require('child_process').exec
+  , map = require('lodash.map')
 
 function tasks(pliers) {
+
+  function notify(message, title) {
+    title = title || 'DevGuides'
+    exec('osascript -e \'display notification "' + message + '" with title "' + title + '"\'')
+  }
+
+  var lrServer
+  try {
+    var Tinylr = require('tiny-lr')
+  } catch (e) {}
+
+  function refresh(files) {
+    if (lrServer) {
+      var cssFiles = map(files, function (file) {
+        return 'css/' + file + '.css'
+      })
+      lrServer.changed({
+        body: {
+          files: cssFiles
+        }
+      })
+    }
+  }
+
+  pliers('livereload', function(done) {
+    if (Tinylr) {
+      var port = 35729
+      if (lrServer === undefined) {
+        lrServer = new Tinylr()
+        lrServer.listen(port, function() {
+          pliers.logger.info('LiveReload listening on', port)
+        })
+      }
+    } else {
+      pliers.logger.info('LiveReload Not Available')
+    }
+    done()
+  })
 
   // Define the filesets
   pliers.filesets('css', join(__dirname, 'source', 'resource', 'css', '**/*.styl'))
@@ -80,8 +116,11 @@ function tasks(pliers) {
 
   pliers('watch', 'build', function () {
 
+    pliers.run('livereload')
+
     pliers.watch(pliers.filesets.css, function () {
       pliers.run('css', function () {
+        refresh(config.stylesheets)
         if (notify) notify('CSS updated')
       })
     })
@@ -98,7 +137,7 @@ function tasks(pliers) {
       })
     })
 
-    var child = pliers.exec('node server')
+    pliers.exec('node server')
 
   })
 
