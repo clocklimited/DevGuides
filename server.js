@@ -38,12 +38,18 @@ function serve() {
 
   console.log(
     [ ''
-    , '  Connect server listening on http://localhost:' + server.address().port
+    , 'Connect server listening on http://localhost:' + server.address().port
     , ''
-    , '  Available routes:'
-    , '  `' + Object.keys(config.routes).join('`, \n  `') + '`'
+    , 'Available routes'
+    , '----------------'
     , ''
-    ].join('\n'))
+    ].join('\n  '))
+
+  Object.keys(config.routes).forEach(function(key) {
+    console.log('  http://localhost:' + server.address().port + key)
+  })
+
+  console.log('\n')
 
 }
 

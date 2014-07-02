@@ -1,4 +1,4 @@
-!!! 5
+doctype
 html.js(lang='en')
   head
 
@@ -18,19 +18,19 @@ html.js(lang='en')
     //- script(src='resource/js/modernizr-2.6.1.min.js')
 
     //- If Modernizr isn't needed, but HTML5 is, create HTML5 element support for IE
-    script
+    script.
       var html5Elements = [ 'article', 'aside', 'footer', 'header', 'hgroup', 'nav', 'section', 'time' ]
       for (var i = 0; i < html5Elements.length; i++) {
         document.createElement(html5Elements[i])
       }
 
-    link(rel='stylesheet', href='/resource/css/index.css')
+    link(rel='stylesheet', href='/static/css/index.css')
 
     //- External CSS files, such as webfonts
     link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Lato:100,400,900|Droid+Serif:400,700,400italic')
 
     //- A favicon.ico file, containing both 16px and 32px variations
-    link(rel='shortcut icon', href='/resource/images/meta/favicon-#{section}.ico')
+    link(rel='shortcut icon', href='/static/images/meta/favicon-#{section}.ico')
 
     //- Apple Specific Meta Tags
     meta(name='viewport', content='initial-scale=1.0, maximum-scale=1.0')
