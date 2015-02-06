@@ -9,12 +9,11 @@
   clearfix()
   margin-left auto
   margin-right auto
-  max-width 40em
+  max-width 45em
   padding-left 1em
   padding-right 1em
 
 .centering-unpadded
-  max-width 42em
   padding-left 0
   padding-right 0
 
@@ -22,15 +21,29 @@
 // PAGE ELEMENTS
 //
 
-.page-header
-  height 12em
-  background-color $sectionDefault
+// .page-header
+//   height 12em
+//   background-color $sectionDefault
 
-  h1
-    margin-top 2.5em
-    text-align center
-    font-size 2em
-    color #fff
+//   h1
+//     margin-top 2.5em
+//     text-align center
+//     font-size 2em
+//     color #fff
+
+
+
+// @media $b700
+
+//   .page-header
+//     position fixed
+//     top 0
+//     left 0
+//     height 16em
+//     width 100%
+
+//     h1
+//       font-size 3em
 
 .page-content
   background-color $colorBodyBg
@@ -45,7 +58,19 @@
     left 0
     right 0
     height 20px
-    background-image linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 100%)
+    background-image linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.1))
+
+  &:after
+    content ""
+    position absolute
+    top 100%
+    left 0
+    right 0
+    height 20px
+    background-image linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,0.1))
+
+  h2, h3, h4, h5, h6
+    margin-top 2em
 
   ul, ol
     li
@@ -58,19 +83,36 @@
     li
       list-style-type decimal
 
+  img
+    display block
+    margin 0 auto
 
 @media $b700
 
-  .page-header
-    position fixed
-    top 0
-    left 0
-    height 16em
-    width 100%
-
-    h1
-      font-size 3em
-
   .page-content
-    margin-top 16em
+    margin-top 260px
     margin-bottom 5em
+
+
+
+
+
+.page-content
+  h1:first-child
+    font-size 2em
+
+@media $b700
+  .page-content
+    h1:first-child
+      position fixed
+      top 0
+      left 0
+      z-index -1
+      padding-top 40px
+      height 260px
+      line-height @height - @padding-top
+      width 100%
+      font-size 3em
+      margin-bottom 0
+      text-align center
+      color #fff

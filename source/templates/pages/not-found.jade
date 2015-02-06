@@ -1,47 +1,45 @@
 extend ../layouts/default
 
 block content
-  .section
-    .centering
-      :markdown
-        **The page you have requested could not be found.**
+  :markdown
+    # Page Not Found
 
-        If you suspect that this an error and that it should exist, raise an
-        [issue on the repository](https://github.com/clocklimited/DevGuides/issues/new).
-        Better still: [fork it, fix it and send a pull request](https://github.com/clocklimited/DevGuides/fork).
+    **The page you have requested could not be found.**
 
-  .section
-    .centering
-      :markdown
+    If you suspect that this an error and that it should exist, raise an
+    [issue on the repository](https://github.com/clocklimited/DevGuides/issues/new).
+    Better still: [fork it, fix it and send a pull request](https://github.com/clocklimited/DevGuides/fork).
 
-        #### Know your HTTP status codes
+    ---
 
-        While you're here, you can brush up on some common HTTP status codes. [Full list here](http://en.wikipedia.org/wiki/List_of_HTTP_status_codes).
+    #### Know your HTTP status codes
 
-      table
-        thead
-          tr
-            th(width='40%') Status code
-            th(width='60%') Meaning
+    While you're here, you can brush up on some common HTTP status codes. [Full list here](http://en.wikipedia.org/wiki/List_of_HTTP_status_codes).
 
-        tbody
-          tr
-            td: i 200 OK
-            td Standard response for a successful request
+  table
+    thead
+      tr
+        th(width='40%') Status code
+        th(width='60%') Meaning
 
-          tr
-            td: i 404 Not Found
-            td The requested resource could not be found
+    tbody
+      tr
+        td: i 200 OK
+        td Standard response for a successful request
 
-          tr
-            td: i 301 Moved Permanently
-            td The requested resource has moved and is not coming back
+      tr
+        td: i 404 Not Found
+        td The requested resource could not be found
 
-          tr
-            td: i 400 Bad Request
-            td The request did not make sense
+      tr
+        td: i 301 Moved Permanently
+        td The requested resource has moved and is not coming back
 
-          tr
-            td: i 500 Internal Server Error
-            td An error happened causing the server to be unable to respond normally
+      tr
+        td: i 400 Bad Request
+        td The request did not make sense
+
+      tr
+        td: i 500 Internal Server Error
+        td An error happened causing the server to be unable to respond normally
 

@@ -1,17 +1,15 @@
 include ../components/head
 
-body#top.open(class=((bodyClass !== 'undefined') ? bodyClass : ''))
+body#top.open(class=((section !== 'undefined') ? 'section-#{section}' : ''))
 
   .container
     include ../components/main-header
 
-    header.page-header
-      .centering
-        h1= title
-
     .page-content
 
-      block content
+      .section
+        .centering
+          block content
 
 
     include ../components/main-footer

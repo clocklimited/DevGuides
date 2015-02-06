@@ -1,18 +1,19 @@
 sectionStyling($sectionColor)
-  ::-moz-selection
-    color #fff
-    background $sectionColor
-    text-shadow none
   ::selection
     color #fff
     background $sectionColor
     text-shadow none
 
-  .page-header
+  body&
     background-color $sectionColor
 
+  .page-content a
+    color $sectionColor
+
+  pre
+    border-color $sectionColor
+
   .main-footer
-    background-color $sectionColor
     color #fff
 
 

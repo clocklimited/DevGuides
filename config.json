@@ -4,136 +4,117 @@
 , "pages":
   [ { "template": "index"
     , "data":
-      { "bodyClass": "section-default page-homepage"
-      , "section": "default"
-      , "title": "Dev Guides"
+      { "section": "default"
+      , "title": "Clock Dev Guides"
       , "isHome": true
       }
     }
   , { "template": "html-overview"
     , "data":
-      { "bodyClass": "section-html page-html-overview language-markup"
-      , "section": "html"
+      { "section": "html"
       , "title": "HTML"
       }
     }
   , { "template": "html-jade"
     , "data":
-      { "bodyClass": "section-html page-html-jade language-markup"
-      , "section": "html"
-      , "title": "Using Jade"
+      { "section": "html"
+      , "title": "Jade"
       }
     }
-  , { "template": "html-components"
+  , { "template": "html-jade-style-guide"
     , "data":
-      { "bodyClass": "section-html page-html-components language-markup"
-      , "section": "html"
-      , "title": "Components"
+      { "section": "html"
+      , "title": "Jade Style Guide"
       }
     }
   , { "template": "html-choosing-classes"
     , "data":
-      { "bodyClass": "section-html page-html-choosing-classes language-markup"
-      , "section": "html"
+      { "section": "html"
       , "title": "Choosing Classes"
       }
     }
   , { "template": "css-overview"
     , "data":
-      { "bodyClass": "section-css page-css-overview language-css"
-      , "section": "css"
+      { "section": "css"
       , "title": "CSS"
       }
     }
   , { "template": "css-stylus"
     , "data":
-      { "bodyClass": "section-css page-css-stylus language-css"
-      , "section": "css"
-      , "title": "Using Stylus"
+      { "section": "css"
+      , "title": "Stylus"
       }
     }
-  , { "template": "css-base-styles"
+  , { "template": "css-stylus-style-guide"
     , "data":
-      { "bodyClass": "section-css page-css-base-styles language-css"
-      , "section": "css"
-      , "title": "Base Styles"
+      { "section": "css"
+      , "title": "Stylus Style Guide"
       }
     }
   , { "template": "css-modular-css"
     , "data":
-      { "bodyClass": "section-css page-css-modular-css language-css"
-      , "section": "css"
+      { "section": "css"
       , "title": "Modular CSS"
       }
     }
   , { "template": "js-overview"
     , "data":
-      { "bodyClass": "section-javascript page-javascript-overview language-javascript"
-      , "section": "javascript"
+      { "section": "javascript"
       , "title": "JavaScript"
       }
     }
   , { "template": "js-style-guide"
     , "data":
-      { "bodyClass": "section-javascript page-javascript-style-guide language-javascript"
-      , "section": "javascript"
-      , "title": "Style Guide"
+      { "section": "javascript"
+      , "title": "JavaScript Style Guide"
       }
     }
   , { "template": "js-setup"
     , "data":
-      { "bodyClass": "section-javascript page-javascript-setup language-javascript"
-      , "section": "javascript"
-      , "title": "Our Setup"
+      { "section": "javascript"
+      , "title": "JavaScript Setup"
       }
     }
   , { "template": "js-tips"
     , "data":
-      { "bodyClass": "section-javascript page-javascript-tips language-javascript"
-      , "section": "javascript"
-      , "title": "Tips"
+      { "section": "javascript"
+      , "title": "JavaScript Tips"
       }
     }
   , { "template": "documents-overview"
     , "data":
-      { "bodyClass": "section-documents page-documents-overview"
-      , "section": "documents"
+      { "section": "documents"
       , "title": "Documents"
       }
     }
   , { "template": "documents-design-deliverables"
     , "data":
-      { "bodyClass": "section-documents page-documents-design-deliverables"
-      , "section": "documents"
+      { "section": "documents"
       , "title": "Design Deliverables"
       }
     }
-  , { "template": "documents-go-live-checklist"
+  , { "template": "documents-working-with-images"
     , "data":
-      { "bodyClass": "section-documents page-documents-go-live-checklist"
-      , "section": "documents"
-      , "title": "Go-Live Checklist"
+      { "section": "documents"
+      , "title": "Working With Images"
       }
     }
   , { "template": "documents-working-with-sublime"
     , "data":
-      { "bodyClass": "section-documents page-documents-working-with-sublime language-javascript"
-      , "section": "documents"
+      { "section": "documents"
       , "title": "Working With Sublime"
       }
     }
   , { "template": "documents-our-favourite-resources"
     , "data":
-      { "bodyClass": "section-documents page-documents-our-favourite-resources"
-      , "section": "documents"
+      { "section": "documents"
       , "title": "Our Favourite Resources"
       }
     }
   , { "template": "not-found"
     , "data":
-      { "bodyClass": "not-found"
-      , "section": "not-found"
-      , "title": "Not Found"
+      { "section": "not-found"
+      , "title": "Page Not Found"
       }
     }
   ]
@@ -144,11 +125,11 @@
   { "/": "index"
   , "/html": "html-overview"
   , "/html/jade": "html-jade"
-  , "/html/components": "html-components"
+  , "/html/jade-style-guide": "html-jade-style-guide"
   , "/html/choosing-classes": "html-choosing-classes"
   , "/css": "css-overview"
   , "/css/stylus": "css-stylus"
-  , "/css/base-styles": "css-base-styles"
+  , "/css/stylus-style-guide": "css-stylus-style-guide"
   , "/css/modular-css": "css-modular-css"
   , "/js": "js-overview"
   , "/js/style-guide": "js-style-guide"
@@ -157,7 +138,7 @@
   , "/documents": "documents-overview"
   , "/documents/browser-support": "documents-browser-support"
   , "/documents/design-deliverables": "documents-design-deliverables"
-  , "/documents/go-live-checklist": "documents-go-live-checklist"
+  , "/documents/working-with-images": "documents-working-with-images"
   , "/documents/working-with-sublime": "documents-working-with-sublime"
   , "/documents/our-favourite-resources": "documents-our-favourite-resources"
   }

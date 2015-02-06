@@ -7,9 +7,9 @@
     "directory-copy": "~0.0.4",
     "stylus-renderer": "~0.0.2",
     "jade-renderer": "~0.0.4",
-    "nib": "~0.9.1",
-    "stylus": "~0.32.0",
-    "jade": "~0.28.1",
+    "nib": "~1.0.4",
+    "stylus": "~0.49.3",
+    "jade": "~1.8.2",
     "connect": "~2.7.2",
     "marked": "~0.2.8"
   }

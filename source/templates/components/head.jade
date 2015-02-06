@@ -1,4 +1,4 @@
-!!! 5
+doctype
 html.js(lang='en')
   head
 
@@ -6,19 +6,19 @@ html.js(lang='en')
     meta(charset='utf-8')
 
     if(typeof isHome !== 'undefined' && isHome)
-      title Dev Guides – Front end documentation
+      title Clock Dev Guides – Front end documentation
     else
-      title #{title} / Dev Guides
+      title #{title} / Clock Dev Guides
 
     meta(name='description', content='')
     meta(name='keywords', content='')
-    meta(name='author', content='Jack Brewer')
+    meta(name='author', content='')
 
     //- Modernizr should only be used when needed. Be sure to only include the modules you are testing for
     //- script(src='resource/js/modernizr-2.6.1.min.js')
 
     //- If Modernizr isn't needed, but HTML5 is, create HTML5 element support for IE
-    script
+    script.
       var html5Elements = [ 'article', 'aside', 'footer', 'header', 'hgroup', 'nav', 'section', 'time' ]
       for (var i = 0; i < html5Elements.length; i++) {
         document.createElement(html5Elements[i])
@@ -27,13 +27,12 @@ html.js(lang='en')
     link(rel='stylesheet', href='/resource/css/index.css')
 
     //- External CSS files, such as webfonts
-    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Lato:100,400,900|Droid+Serif:400,700,400italic')
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,300,600')
+
 
     //- A favicon.ico file, containing both 16px and 32px variations
     link(rel='shortcut icon', href='/resource/images/meta/favicon-#{section}.ico')
 
     //- Apple Specific Meta Tags
-    meta(name='viewport', content='initial-scale=1.0, maximum-scale=1.0')
-    meta(name='apple-mobile-web-app-capable', content='yes')
-    meta(name='apple-mobile-web-app-status-bar-style', content='black')
+    meta(name='viewport', content='initial-scale=1')
     meta(name='apple-mobile-web-app-title', content='My App')

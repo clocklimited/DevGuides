@@ -16,9 +16,11 @@
     background-color $sectionJavascript
   &.section-documents
     background-color $sectionDocuments
+
 .panel-header
   padding 1em
   h2
+    margin-top 0
     margin-bottom 0
     a
       color #fff
@@ -41,8 +43,6 @@
     padding 1.5em 0 0
     @media $b700
       padding 3em 0 1.5em
-  .section:nth-child(even)
-    background-color $colorBodyBgDark
 
 
 body
@@ -205,30 +205,4 @@ body
     display block
 
 
-// Blockquote
-blockquote
-  p
-    font-size 1.6em
-    line-height 1.3
 
-  p:first-of-type
-    &:before
-      content open-quote
-    &:after
-      content close-quote
-
-  small
-    display block
-    text-align right
-    font-size 0.4em
-    margin-top 0.2em
-
-    &, a, cite
-      color #777
-      font-style normal
-
-@media $b700
-  blockquote
-    p
-      padding-left 1.5em
-      padding-right 1.5em

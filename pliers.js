@@ -7,6 +7,7 @@ var path = require('path')
   , renderStylus = require('stylus-renderer')
   , renderJade = require('jade-renderer')
   , config = require('./config')
+  , md = require('marked')
 
 try {
   var notify = require('growl')
@@ -20,6 +21,7 @@ function tasks(pliers) {
     join(__dirname, 'source', 'resource', '**/*'),
     join(__dirname, 'source', 'resource', 'css', '**/*.styl'))
   pliers.filesets('jade', join(__dirname, 'source', 'templates', '**/*.jade'))
+  pliers.filesets('markdown', join(__dirname, 'source', 'content', '**/*.md'))
 
   pliers('structure', function (done) {
     mkdirs(__dirname, [ join('output', 'resource', 'css') ], function (err) {
@@ -66,6 +68,7 @@ function tasks(pliers) {
     renderJade(config.pages,
       { src: join(__dirname, 'source', 'templates', 'pages')
       , dest: join(__dirname, 'output')
+      , locals: { md: md }
       }
       , function (err) {
         if (err) {
@@ -93,6 +96,12 @@ function tasks(pliers) {
     })
 
     pliers.watch(pliers.filesets.jade, function () {
+      pliers.run('jade', function () {
+        if (notify) notify('Jade updated')
+      })
+    })
+
+    pliers.watch(pliers.filesets.markdown, function () {
       pliers.run('jade', function () {
         if (notify) notify('Jade updated')
       })

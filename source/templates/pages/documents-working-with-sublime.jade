@@ -1,41 +1,4 @@
 extend ../layouts/default
 
 block content
-  .section
-    .centering
-        :markdown
-
-          [Sublime Text](http://www.sublimetext.com/) is a popular, feature rich text editor.
-
-          ## Basic setup
-
-
-          These settings are a must, to conform to the standards set in this guide. These settings are available to download in this repo and should be place in you Sublime User folder.
-
-          Standard Settings
-
-              {
-                "dictionary": "Packages/Language - English/en_GB.dic",
-                "rulers":
-                [
-                  80
-                ],
-                "tab_size": 2,
-                "translate_tabs_to_spaces": true,
-                "trim_trailing_white_space_on_save": true
-              }
-
-          If you are working with Jade files, ensure you have a Jade syntax specific settings file
-
-              {
-                "trim_trailing_white_space_on_save": false
-              }
-
-          [github.com/clocklimited/SublimeSettings](https://github.com/clocklimited/SublimeSettings)
-
-          Use spaces for indentation, set to a two-space tab width. We also trim all trailing whitespace when saving (with the exception of Jade files). Please ensure these are both set correctly.
-
-
-          ## Additional Bundles
-
-          [Jackbrewer](https://github.com/jackbrewer) on GitHub has made some [HTML](https://github.com/jackbrewer/html-plus.tmbundle) and [CSS](https://github.com/jackbrewer/css-plus.tmbundle) bundles that speed up dev time in Sublime. His [Sublime settings](https://github.com/jackbrewer/Sublime-Settings) are also available to aid with Sublime setup.
+  include:md ../../content/pages/documents/working-with-sublime.md
