@@ -152,3 +152,12 @@ Also notice that we didn’t need to tell our CSS that the .main-navigation appe
 
 ---
 
+## Converting Third-Party CSS
+
+CSS provided by third-party services should always be converted to Stylus, conforming to our style guide where possible. This ensures consistency for future developers, and allows us to utilise the project’s variables or mixins if required. Services such as [CSS2Stylus](http://css2stylus.com/) will attempt this conversion for you, but ensure you fully review the generated output.
+
+---
+
+## Versionator Paths
+
+We use [Versionator](https://github.com/serby/versionator) to cache-bust our static assets. Review the [Versionator page](/documents/versionator) for more information on how to use this in Stylus

@@ -19,34 +19,9 @@ div.container
     a(href='/') Project Title
 ```
 
-### Classes
-
-Classes should always precede any attributes.
-
-```jade
-//- Bad
-button(type='submit').class Submit
-button.class1(type='submit').class2 Submit
-
-//- Good
-button.class1.class2(type='submit') Submit
-```
-
-### IDs
-
-IDs should always be written as attributes to better differentiate from classes.
-
-```jade
-//- Bad
-nav.list-unstyled#primary-navigation
-
-//- Good
-nav.list-unstyled(id='primary-navigation')
-```
-
 ### Attributes
 
-Attributes should be comma separated. This is  backwards compatible with legacy Jade and is more consistent with a JavaScript style.
+Attributes should be comma separated. This is backwards compatible with legacy Jade and is more consistent with a JavaScript style.
 
 ```jade
 //- Bad
@@ -54,6 +29,60 @@ input(type='text' name='title' value='')
 
 //- Good
 input(type='text', name='title', value='')
+```
+
+Elements with many attributes should use a multi-line format to avoid line-length getting too long. It is also easier to spot where variables are being used.
+
+```jade
+//- Bad
+input(type='text', maxlength='20', placeholder='Example Placeholder', required, value=data.value)
+
+//- Good
+input(
+  type='text'
+  value='Example'
+  maxlength='20'
+  placeholder='Example Placeholder'
+  required
+  value=data.value
+  )
+```
+
+### Classes
+
+Classes should always precede any attributes. This adds consistency and allows for better formatting of multi-line attributes.
+
+```jade
+//- Bad
+button(type='submit').class Submit
+
+button.class1(type='submit').class2 Submit
+
+input(
+  type='text'
+  value='Example'
+  ).class1.class2
+
+//- Good
+button.class1.class2(type='submit') Submit
+
+//- Good
+input.class1.class2(
+  type='text'
+  value='Example'
+  )
+```
+
+### IDs
+
+IDs should always be written as attributes to better differentiate from classes. This helps reinforce the fact that we shouldn't be using `id`s for styling purposes, only for anchor linking.
+
+```jade
+//- Bad
+nav.list-unstyled#primary-navigation
+
+//- Good
+nav.list-unstyled(id='primary-navigation')
 ```
 
 ### Quotes
@@ -69,7 +98,7 @@ input(type='text', name='title')
 ```
 
 ### HTML In Jade
-Whilst Jade can handle inline HTML, write all HTML as Jade.
+Avoid writing any HTML within your Jade. Whilst Jade can handle inline HTML, this adds consistency.
 
 ```jade
 //- Bad
@@ -79,6 +108,8 @@ p Some <em>emphasised</em> text
 p Some 
   em emphasised
   |  text
+
+p Some #[em emphasised] text
 ```
 
 ### Comments
@@ -93,14 +124,14 @@ Use the `//-` prefix for Jade comments as they are not compiled to HTML comments
 
 ## Variable Formatting
 
-When a using a variable as the content of an element, always leave a space between the element and the variable.
+When a using a variable as the content of an element, always leave a space between the element and the variable. Note: this doesn't apply to attributes
 
 ```jade
 //- Bad
-h1=title
+a(href= link)=title
 
 //- Good
-h1= title
+a(href=link)= title
 ```
 
 The `#{variable}` syntax is useful when mixing variables with strings, but isn’t needed when outputting variables on their own.
@@ -130,7 +161,7 @@ img(alt='A photo of the #{city} skyline.')
 
 ## Logic
 
-When using `if`, `case`, `each` etc., use the built in Jade format (without leading hyphens). The leading hyphens break out into raw JS, and should be avoided in Jade wherever possible.
+When using `if`, `case`, `each` etc., use the built-in Jade format (without leading hyphens). The leading hyphens break out into raw JS, and should be avoided in Jade wherever possible.
 
 ```jade
 //- Bad
@@ -143,6 +174,20 @@ When using `if`, `case`, `each` etc., use the built in Jade format (without lead
 if selected
   …
 else
+  …
+```
+
+### Iteration
+
+Use the built-in Jade `each` loop when iteration through a collection.
+
+```
+//- Bad
+//- Good
+each value in items
+  …
+
+each value, key in items
   …
 ```
 
@@ -196,21 +241,4 @@ if foo == bar
 each i in [ 1, 2, 3 ]
 if foo === bar
 +baz(a, b, c)
-```
-
----
-
-## Versionator Paths
-
-All assets should use the `versionPath()` function to wrap any asset referenced within an attribute, with the exception of external assets.
-
-```jade
-//- Good
-link(rel='stylesheet', href=versionPath('/css/style.css'))
-script(src=versionPath('/js/example.js'))
-meta(name='msapplication-TileImage', content=versionPath('image.png'))
-
-//- Exception
-link(rel='stylesheet', href='http://fonts.googleapis.com/…')
-
 ```

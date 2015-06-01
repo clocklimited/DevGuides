@@ -1,16 +1,14 @@
 # HTML
 
-Writing semantic HTML is important. Content ordering and title hierarchy should be thought about and forms and links should all work.
+Whilst we write our markup primarily using Jade, we still need to remember the rules and ideas which result in high-quality accessible HTML.
 
-Always write your optimal HTML before considering any CSS or JavaScript. It should be possible to use and navigate a site without either of these things enabled.
+Always write your optimal markup before considering any CSS or JavaScript. Writing semantic markup is important. Content ordering and title hierarchy should be thought about and forms and links should all work as expected, whether using a mouse, touch device, keyboard, or screen-reader. It should be possible to use and navigate a site in a logical order, using any of these methods. Also consider how content will be displayed across various screen sizes, as this can have an impact on the intended source order.
 
 ---
 
 ## HTML5
 
-Try to use as much HTML5 as possible, without relying too heavily on polyfills to force older browsers to work.
-
-Use new elements such as `<header>`, `<footer>`, `<article>`, with a polyfill to help older browsers recognise them as valid elements. If you are using [Modernizr](http://modernizr.com/), this comes as standard. If not, add this JavaScript snippet to the document head: [HTML5 element Polyfill](https://gist.github.com/jackbrewer/5894623).
+Try to use as much HTML5 as possible, without relying too heavily on polyfills to force older browsers to work. We currently still support Internet Explorer 8 whenever possible, so we include the HTML5Shiv polyfill to help older browsers recognise them as valid elements. If you are using [Modernizr](http://modernizr.com/), this comes as standard. If not, add this JavaScript snippet to the document head: [HTML5 element Polyfill](https://gist.github.com/jackbrewer/5894623).
 
 HTML5 allows the use of attributes without quotes, but we always add them to increase consistency and readability.
 

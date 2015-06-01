@@ -105,6 +105,12 @@
       , "title": "Working With Sublime"
       }
     }
+  , { "template": "documents-versionator"
+    , "data":
+      { "section": "documents"
+      , "title": "Versionator"
+      }
+    }
   , { "template": "documents-our-favourite-resources"
     , "data":
       { "section": "documents"
@@ -140,6 +146,7 @@
   , "/documents/design-deliverables": "documents-design-deliverables"
   , "/documents/working-with-images": "documents-working-with-images"
   , "/documents/working-with-sublime": "documents-working-with-sublime"
+  , "/documents/versionator": "documents-versionator"
   , "/documents/our-favourite-resources": "documents-our-favourite-resources"
   }
   , "compressCSS": true

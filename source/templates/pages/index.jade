@@ -1,38 +1,4 @@
 extend ../layouts/default
 
 block content
-
-  h1= title
-
-  .grid
-    .grid__item.one-whole.lapdesk-one-half
-      .panel.section-html
-        .panel-header
-          h2
-            a(href='/html') HTML
-        .panel-content
-          include ../components/subnav/html
-    .grid__item.one-whole.lapdesk-one-half
-      .panel.section-css
-        .panel-header
-          h2
-            a(href='/css') CSS
-        .panel-content
-          include ../components/subnav/css
-
-  .grid
-    .grid__item.one-whole.lapdesk-one-half
-      .panel.section-javascript
-        .panel-header
-          h2
-            a(href='js') JavaScript
-        .panel-content
-          include ../components/subnav/javascript
-
-    .grid__item.one-whole.lapdesk-one-half
-      .panel.section-documents
-        .panel-header
-          h2
-            a(href='documents') Documents
-        .panel-content
-          include ../components/subnav/documents
+  include:md ../../content/pages/index.md

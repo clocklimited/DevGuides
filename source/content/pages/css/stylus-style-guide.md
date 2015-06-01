@@ -170,28 +170,6 @@ Use the `/` root selector to avoid duplicating declarations.
     background #fff
 ```
 
-
----
-
-## Versionator Paths
-
-All assets should use the `versionPath()` function in place of the standard CSS `url()`, with the exception of external assets.
-
-```stylus
-// Good
-@font-face
-  font-family 'WebFontName'
-  src versionPath('/assets/fonts/webfont.eot')
-  …
-
-.element
-  background-image versionPath('/assets/img/logo.png')
-
-// Exception
-.element
-  background-image url('http://example.com/logo.png')
-```
-
 ---
 
 ## Comments
@@ -222,9 +200,3 @@ If you need a comment to appear in the output CSS, use the following syntax:
 ```
 
 *Note: The `!` will be removed as part of the Stylus compilation, leaving a regular CSS style comment.*
-
----
-
-## Converting Third-Party CSS
-
-CSS provided by third-party services should always be converted to Stylus, conforming to our style guide where possible. This ensures consistency for future developers, and allows us to utilise the project’s variables or mixins if required. Services such as [CSS2Stylus](http://css2stylus.com/) will attempt this conversion for you, but ensure you fully review the generated output.
