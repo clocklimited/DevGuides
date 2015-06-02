@@ -128,7 +128,7 @@ p This is a sentence with
   |  in the middle.
 ```
 
-Since version 1.0, Jade has also added support for Inline Tag Interpolation, which allows you to write additional HTML elements min-sentence.
+Since version 1.0, Jade has also added support for Inline Tag Interpolation, which allows you to write additional HTML elements mid-sentence.
 
 ```jade
 p A sentence with an #[a(href='/') anchor] in the middle.
