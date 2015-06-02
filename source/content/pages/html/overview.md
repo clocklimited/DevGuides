@@ -52,7 +52,7 @@ Definition lists contain items which have a title and a description. Titles may 
 
 ## Tables
 
-Tables should be used for displaying tabular data – nothing else. If you are usure, think how the same information would look in a spreadsheet. Does it still make sense to be a table?
+Tables should be used for displaying tabular data – nothing else. If you are unsure, think how the same information would look in a spreadsheet. Does it still make sense to be a table?
 
 Ensure all tables contain correct `<thead>`, `<tbody>`, `<th>` elements and scope attributes. If using `<tfoot>`, place it before the `<tbody>`.
 
@@ -70,7 +70,7 @@ Group sets of inputs in fieldsets, especially groups of radio buttons or checkbo
 
 Use the HTML5 doctype in all new projects. Within the `<head>` of the document, define the character-set as UTF-8, and we use meta tags to define accurate page titles, descriptions and keywords.
 
-After the metatags, include relevant stylesheets, leaving any JavaScript to be included later on, before the closing body tag. Tracking and Polyfill JS files are sometimes required in the head.
+After the meta tags, include relevant stylesheets, leaving any JavaScript to be included later on, before the closing body tag. Tracking and Polyfill JS files are sometimes required in the head.
 
 Add a retina-ready favicon<sup><a class="reference-link" href="#ref-retina-favicon"></a></sup> and simple mobile-friendly information / icons.
 
@@ -83,7 +83,7 @@ Finally, include any extras, such as Open Graph tags, Google Verification Codes,
 Accessibility is important for everything we produce. Here are some basic ways to ensure our products are accessible.
 
 * Always provide alt text on images.
-* Think about using microformats where possible – for example addresses and calendar events<sup><a class="reference-link" href="#ref-microformats"></a></sup>.
+* Think about using micro-formats where possible – for example addresses and calendar events<sup><a class="reference-link" href="#ref-microformats"></a></sup>.
 
 *[This section needs more information]*
 

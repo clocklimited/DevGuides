@@ -1,13 +1,13 @@
 # JavaScript Setup
 
-We have a well-defined setup for our approach to frontend JS. These processes are aimed
+We have a well-defined setup for our approach to front-end JS. These processes are aimed
 at maintaining *high quality*, *resusable* code and minimising the risk of *bugs*.
 
 We use [pliers](https://npmjs.org/package/pliers), our build tool, to automate our
 [browserify](http://github.com/substack/browserify) build every time a piece of code
 changes. We set up our text editors with [jshint](https://npmjs.org/package/jshint)
 to enforce our [style guide](/js/style-guide). We test our code with [mocha](https://npmjs.org/package/mocha)
-and publish reuseable modules to the npm registry.
+and publish re-usable modules to the npm registry.
 
 ---
 
@@ -38,11 +38,11 @@ that we can run in the browser.
 ### Module System
 
 Browserify brings [node's module system](http://nodejs.org/api/modules.html) to the browser.
-This means we can organise our code into small, digestable modules (rather than battling with
+This means we can organise our code into small, digestible modules (rather than battling with
 1k+ LOC), and pull them together with `require()`.
 
-Through synthesising node's module system, browserify enables us to make use of the abundence
-of modules available in [npm](http://npmjs.org). While a lot of those avaiable in npm are node-
+Through synthesising node's module system, browserify enables us to make use of the abundance
+of modules available in [npm](http://npmjs.org). While a lot of those available in npm are node-
 specific, many work both in node and in the browser. Here are a few examples that we use both on
 the server and in the browser:
 
@@ -50,7 +50,7 @@ the server and in the browser:
 * [Slugg](https://npmjs.org/package/slugg)
 * [Bytes](https://npmjs.org/package/bytes)
 
-By separating our code into modules, it increases **testability** and **resusablility**. If a module
+By separating our code into modules, it increases **testability** and **re-usability**. If a module
 you have authored inside your application might be ever be useful on any other project, you should
 consider publishing it to npm.
 
@@ -89,7 +89,7 @@ $('.js-people').append(html)
 …and after the transform it will equivalent to this:
 
 ```javascript
-var personTemplate = function annonymous(locals) {
+var personTemplate = function anonymous(locals) {
   // Compiled jade template body here…
 }
 

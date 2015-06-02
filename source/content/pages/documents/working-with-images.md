@@ -18,9 +18,9 @@ Before you commit an image file, ensure it has been optimised fully. There are a
 
 ### [ImageOptim](https://imageoptim.com/)
 
-Combines multiple tools into a simple drag-and-drop interface to optimize compression parameters, remove junk metadata and unnecessary color profiles. This should be used on all image files.
+Combines multiple tools into a simple drag-and-drop interface to optimize compression parameters, remove junk meta data and unnecessary colour profiles. This should be used on all image files.
 
-*Note: Images can be optimised multiple times using ImageOptim. Keep pressing the “Again” button until all images have crosses next to them, sinifying they cannot be further optimised.*
+*Note: Images can be optimised multiple times using ImageOptim. Keep pressing the “Again” button until all images have crosses next to them, signifying they cannot be further optimised.*
 
 ![ImageOptim Interface Screenshot](/resource/images/content/imageoptim.png)
 

@@ -30,7 +30,7 @@ Further reading: [CSS Wizardry – When using IDs can be a pain in the class](ht
 
 ## JavaScript Classes
 
-When adding JavaScript functionality to your project, avoid targetting existing classes with your JS. Instead add a class with a `js-` prefix to the element you are targetting. This separates style from functionality and allows for the classes to be moved or renamed independantly if needed. It also allows you to choose class names which more accurately describe what is intended.
+When adding JavaScript functionality to your project, avoid targeting existing classes with your JS. Instead add a class with a `js-` prefix to the element you are targeting. This separates style from functionality and allows for the classes to be moved or renamed independently if needed. It also allows you to choose class names which more accurately describe what is intended.
 
 ```markup
 <button class="btn-primary js-btn-hide">Hide Me!<button>
@@ -113,7 +113,7 @@ Once you apply the BEM convention, each element becomes recognisable, even in is
 
 ### BEM and CSS
 
-BEM Benefits the CSS in terms of easier specificity management. In the following examples, notice that with BEM, none of the selectors need to be qualifed with a parent. This allows for easier overriding of styles later in the file without needing to continually fight with specificity. There is also no chance of styling changes to `.face` or `.hand` in isolation unexpectedly affecting elements in separate modules.
+BEM Benefits the CSS in terms of easier specificity management. In the following examples, notice that with BEM, none of the selectors need to be qualified with a parent. This allows for easier overriding of styles later in the file without needing to continually fight with specificity. There is also no chance of styling changes to `.face` or `.hand` in isolation unexpectedly affecting elements in separate modules.
 
 **Without BEM**
 ```css

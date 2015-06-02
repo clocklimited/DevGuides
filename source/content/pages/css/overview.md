@@ -4,7 +4,7 @@ Try to keep stylesheets as easy to read as possible, using line-breaks between r
 
 Don’t add a unit to 0 (zero) values. 0px is the same as 0% or 0em, so there is no need to specify the unit.
 
-Use hex colours. These should be in lowercase and shorthand where possible – for example: `#fff`. If you need transparency use rgba() but think about whether you need to supply a fallback hex colour for browsers which don’t provide support for the alpha channel.
+Use hex colours. These should be in lower-case and shorthand where possible – for example: `#fff`. If you need transparency use rgba() but think about whether you need to supply a fall-back hex colour for browsers which don’t provide support for the alpha channel.
 
 ```
 .button-action {
@@ -19,7 +19,7 @@ Use hex colours. These should be in lowercase and shorthand where possible – f
 
 ## Shorthand
 
-Shorthand can be used for properties that have integer or hex-based values, but background and font values should always be separated out into individual parameters to increase readability, reusability and decrease the temptation for over-repetition.
+Shorthand can be used for properties that have integer or hex-based values, but background and font values should always be separated out into individual parameters to increase readability, re-usability and decrease the temptation for over-repetition.
 
 **Good use of shorthand:**
 ```
@@ -52,7 +52,7 @@ Embrace progressive enhancement. Use browser vendor prefixes to add rounded corn
 
 To ensure maximum compatibility with all major browsers, use these four vendor prefixes where required – Webkit, Mozilla, Microsoft and Opera.
 
-These should be indented with spaces so the properties line up. This allows for easier multi-line editing in text-editors. The unprefixed version of the property should always appear last.
+These should be indented with spaces so the properties line up. This allows for easier multi-line editing in text-editors. The un-prefixed version of the property should always appear last.
 
 ```
 -webkit-transform: scale(2)
