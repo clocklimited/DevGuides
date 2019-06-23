@@ -1,4 +1,7 @@
 # Dev Guides
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/clocklimited/DevGuides.svg)](https://greenkeeper.io/)
+
 Clock's Front end development guidelines.
 
 ## Setup:
