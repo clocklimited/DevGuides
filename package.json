@@ -4,13 +4,13 @@
   "version": "0.0.0",
   "devDependencies": {
     "directory-structure": "~0.0.2",
-    "directory-copy": "~0.0.4",
-    "stylus-renderer": "~0.0.2",
+    "directory-copy": "~0.1.0",
+    "stylus-renderer": "~1.1.0",
     "jade-renderer": "~0.0.4",
-    "nib": "~1.0.4",
-    "stylus": "~0.49.3",
-    "jade": "~1.8.2",
-    "connect": "~2.7.2",
-    "marked": "~0.2.8"
+    "nib": "~1.1.2",
+    "stylus": "~0.54.5",
+    "jade": "~1.11.0",
+    "connect": "~3.7.0",
+    "marked": "~0.6.2"
   }
 }
